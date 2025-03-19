@@ -1,0 +1,19 @@
+# spring.application.name=api-gateway
+server:
+  port: 8089
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**
+          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/
+
+

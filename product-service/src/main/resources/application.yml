@@ -1,0 +1,18 @@
+# spring.application.name=product-service
+server:
+  port: 8081
+
+spring:
+  application:
+    name: product-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Point to Eureka Server
+    fetchRegistry: true  # Ensure that it fetches the registry from Eureka
+    registerWithEureka: true  # Ensure the service registers with Eureka
+logging:
+  level:
+    com.netflix.eureka: DEBUG
+    com.netflix.discovery: DEBUG
