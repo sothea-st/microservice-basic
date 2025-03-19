@@ -7,3 +7,7 @@ eureka:
     fetchRegistry: false
   instance:
     hostname: localhost
+  server:
+    eviction-interval-timer-in-ms: 30000  # Default 30 seconds
+    # Make sure it's not set too high.
+    # Also, check "renewal" and "expiry" times to avoid services being marked down prematurely.

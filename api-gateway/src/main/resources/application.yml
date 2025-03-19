@@ -1,8 +1,12 @@
-# spring.application.name=api-gateway
+#spring.application.name=api-gateway
+#spring.main.web-application-type=reactive
+
 server:
-  port: 8089
+  port: 8080
 
 spring:
+  main:
+    web-application-type: reactive
   cloud:
     gateway:
       routes:
@@ -10,10 +14,8 @@ spring:
           uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/products/**
-          
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/
-
-
+      defaultZone: http://localhost:8761/eureka/
