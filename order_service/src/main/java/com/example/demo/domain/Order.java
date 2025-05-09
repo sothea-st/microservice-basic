@@ -1,14 +1,16 @@
 package com.example.demo.domain;
 
+import com.example.demo.dto.UserDTO;
+
 public class Order {
     private Long id;
     private String item;
-    private User user;
+    private UserDTO userDTO;
 
-    public Order(Long id, String item, User user) {
+    public Order(Long id, String item, UserDTO userDTO) {
         this.id = id;
         this.item = item;
-        this.user = user;
+        this.userDTO = userDTO;
     }
 
     public Long getId() {
@@ -27,11 +29,11 @@ public class Order {
         this.item = item;
     }
 
-    public User getUser() {
-        return user;
+    public UserDTO getUser() {
+        return userDTO;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 }

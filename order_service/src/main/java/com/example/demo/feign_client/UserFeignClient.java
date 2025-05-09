@@ -1,12 +1,12 @@
-package com.example.demo.config;
+package com.example.demo.feign_client;
 
-import com.example.demo.domain.User;
+import com.example.demo.dto.UserDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "user-service")
-public interface UserClient {
+public interface UserFeignClient {
     @GetMapping("/users/{id}")
-    User getUser(@PathVariable Long id);
+    UserDTO getUser(@PathVariable Long id);
 }

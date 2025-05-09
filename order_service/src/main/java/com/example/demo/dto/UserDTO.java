@@ -1,10 +1,10 @@
-package com.example.demo.domain;
+package com.example.demo.dto;
 
-public class User {
+public class UserDTO {
     private Long id;
     private String name;
 
-    public User() {
+    public UserDTO() {
     }
 
     public Long getId() {
