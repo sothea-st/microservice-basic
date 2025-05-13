@@ -9,13 +9,13 @@ spring:
     gateway:
       routes:
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/api/users/**
         - id: order-service
-          uri: lb://ORDER-SERVICE
+          uri: lb://order-service
           predicates:
-            - Path=/orders/**
+            - Path=/api/orders/**
 
 # this means register api-gateway to eureka
 eureka:
