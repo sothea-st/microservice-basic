@@ -16,6 +16,10 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/api/orders/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+              - Path=/auth/**
 
 # this means register api-gateway to eureka
 eureka:

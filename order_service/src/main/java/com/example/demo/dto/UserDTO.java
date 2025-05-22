@@ -3,6 +3,7 @@ package com.example.demo.dto;
 public class UserDTO {
     private Long id;
     private String name;
+    private String phoneNumber;
 
     public UserDTO() {
     }
@@ -21,5 +22,13 @@ public class UserDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
