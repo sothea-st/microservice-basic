@@ -14,6 +14,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public String register(@RequestBody AuthRequest request) {
+        System.out.println("ddddddddddddddd = " + request);
         return authService.register(request.getUsername(), request.getPassword());
     }
 

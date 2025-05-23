@@ -1,13 +1,14 @@
-//package com.example.demo;
-//
-//import org.junit.jupiter.api.Test;
-//import org.springframework.boot.test.context.SpringBootTest;
-//
-//@SpringBootTest
-//class AuthServiceApplicationTests {
-//
-////	@Test
-////	void contextLoads() {
-////	}
-//
-//}
+package com.example.demo;
+
+
+import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.Test;
+
+@SpringBootTest
+class AuthServiceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

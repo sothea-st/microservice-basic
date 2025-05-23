@@ -18,8 +18,8 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public Order getOrder(@PathVariable Long id) {
-        UserDTO userDTO = userFeignClient.getUser(1L);
-        System.out.println("fffffffffff = " + userDTO);
-        return new Order(id, "MacBook", userDTO);
+        //UserDTO userDTO = userFeignClient.getUser(1L);
+//        System.out.println("fffffffffff = " + userDTO);
+        return new Order(id, "MacBook", null);
     }
 }
