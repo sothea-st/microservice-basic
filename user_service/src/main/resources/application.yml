@@ -26,4 +26,5 @@ eureka:
      prefer-ip-address: true
      hostname: localhost
 
-
+jwt:
+  secret: myverysecureandlongjwtsecretkey12345

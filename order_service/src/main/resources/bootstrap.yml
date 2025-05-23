@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order-service   # 👈 Must match config file name in Git repo (auth-service.yml)
+  cloud:
+    config:
+      uri: http://localhost:8888   # 👈 URL of your config-server
+  profiles:
+    active: dev
+

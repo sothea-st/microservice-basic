@@ -8,9 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tb_users")
+@Table(name = "tb_doc_users")
 @AllArgsConstructor
-@NoArgsConstructor
 @Setter
 @Getter
 public class User {

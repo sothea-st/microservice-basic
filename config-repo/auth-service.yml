@@ -1,8 +1,0 @@
-server:
-  port: 8081
-
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/authdb
-    username: youruser
-    password: yourpass
