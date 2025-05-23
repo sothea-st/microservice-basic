@@ -2,10 +2,12 @@ server:
   port: 8888
 
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
           uri: https://github.com/sothea-st/microservice-basic.git
-          default-label: main
+          default-label: micro
           clone-on-start: true

@@ -19,9 +19,9 @@
 #    properties:
 #      hibernate:
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
-jwt:
-  secret: myverysecureandlongjwtsecretkey12345
-  expiration: 3600000 # 1 hour
+#jwt:
+#  secret: myverysecureandlongjwtsecretkey12345
+#  expiration: 3600000 # 1 hour
 
 #eureka:
 #  client:

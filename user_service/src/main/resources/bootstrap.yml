@@ -1,8 +1,16 @@
 spring:
   application:
-    name: user-service   # 👈 Must match config file name in Git repo (auth-service.yml)
-  cloud:
-    config:
-      uri: http://localhost:8888   # 👈 URL of your config-server
+    name: user-service # 👈 this MUST match your file name in config-repo (auth-service.yml)
   profiles:
     active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888 # 👈 URL of your config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
