@@ -18,17 +18,17 @@
 #  instance:
 #     prefer-ip-address: true
 #     hostname: localhost
-
+#
 #jwt:
 #  secret: myverysecureandlongjwtsecretkey12345
+
 
 spring:
   application:
     name: order-service
   profiles:
     active: dev
-  cloud:
-    config:
+  config:
       import: optional:configserver:http://localhost:8888
 
 eureka:
