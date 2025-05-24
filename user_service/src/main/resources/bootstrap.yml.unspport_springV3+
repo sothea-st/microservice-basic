@@ -5,7 +5,7 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8888 # 👈 URL of your config-server
+      import: optional:configserver:http://localhost:8888
 
 eureka:
   client:

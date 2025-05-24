@@ -11,4 +11,4 @@ spring:
           uri: https://github.com/sothea-st/microservice-basic.git
           default-label: micro
           clone-on-start: true
-          searchPaths: config-repo
+          search-paths: config-repo/*
