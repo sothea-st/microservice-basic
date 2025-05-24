@@ -30,6 +30,9 @@
 #     prefer-ip-address: true
 #     hostname: localhost
 
+server:
+  port: 9091
+
 spring:
   application:
     name: api-gateway
