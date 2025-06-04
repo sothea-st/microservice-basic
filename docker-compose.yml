@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  eureka-server:
+    build: ./eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - app-network
+
+  config-server:
+    build: ./config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - eureka-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - app-network
+
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "8222:8222"
+    depends_on:
+      - eureka-server
+      - config-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - app-network
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "9001:9001"
+    depends_on:
+      - eureka-server
+      - config-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - app-network
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+      - config-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - app-network
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "9091:9091"
+    depends_on:
+      - eureka-server
+      - auth-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

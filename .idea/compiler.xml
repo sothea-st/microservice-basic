@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo (5)" />
-        <module name="demo (2)" />
-        <module name="demo" />
-        <module name="demo (4)" />
-        <module name="demo (3)" />
+        <module name="api-gateway" />
+        <module name="config-server" />
+        <module name="user-service" />
+        <module name="eureka-server" />
+        <module name="order-sevice" />
       </profile>
       <profile name="Annotation profile for auth-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -19,19 +19,28 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="demo (1)" />
+        <module name="auth-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo (2)" target="21" />
+      <module name="demo (3)" target="21" />
+      <module name="demo (4)" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="demo" options="-parameters" />
-      <module name="demo (1)" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="demo (2)" options="-parameters" />
       <module name="demo (3)" options="-parameters" />
       <module name="demo (4)" options="-parameters" />
-      <module name="demo (5)" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="order-sevice" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>
